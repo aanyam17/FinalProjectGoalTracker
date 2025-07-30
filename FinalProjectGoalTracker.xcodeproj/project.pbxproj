@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4C954E4A2E3A9B4800D1A536 /* EnterNewGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C954E492E3A9B4800D1A536 /* EnterNewGoalView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4C954E252E39637D00D1A536 /* FinalProjectGoalTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProjectGoalTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C954E492E3A9B4800D1A536 /* EnterNewGoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNewGoalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		4C954E1C2E39637D00D1A536 = {
 			isa = PBXGroup;
 			children = (
+				4C954E492E3A9B4800D1A536 /* EnterNewGoalView.swift */,
 				4C954E272E39637D00D1A536 /* FinalProjectGoalTracker */,
 				4C954E262E39637D00D1A536 /* Products */,
 			);
@@ -119,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C954E4A2E3A9B4800D1A536 /* EnterNewGoalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
