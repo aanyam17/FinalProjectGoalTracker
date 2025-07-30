@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct CreateGoalView: View {
     @State private var showButton = true
     @State private var showNewGoal = false
+    @Query var toDos: [GoalItem]
+    @Environment(\.modelContext) var modelContext
     var body: some View {
         VStack {
             Text("My Goals")
@@ -35,15 +38,33 @@ struct CreateGoalView: View {
                              .stroke(Color(red: 0.710, green: 0.086, blue: 0.196), lineWidth: 0.5)))
             }
                 }
-            .padding()
+        List {
+            ForEach(toDos) { goalItem in
+                if goalItem.isImportant {
+                    Text("‼️" + goalItem.title)
+                } else {
+                    Text(goalItem.title)
+                }
+            }
+            .onDelete(perform: deleteGoal)
+        }
+        .listStyle(.plain)
             if showNewGoal {
-                NewGoalPopUp()
+                NewGoalPopUp(showNewGoal: $showNewGoal, goalItem: GoalItem(title: "", isImportant: false))
+            
             }
         }
+    func deleteGoal(at offsets: IndexSet) {
+        for offset in offsets {
+            let goalItem = toDos[offset]
+            modelContext.delete(goalItem)
+        }
     }
+}
         
         
 
 #Preview {
     CreateGoalView()
+        .modelContainer(for: GoalItem.self, inMemory: true)
 }
