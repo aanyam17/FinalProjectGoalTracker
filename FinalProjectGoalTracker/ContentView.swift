@@ -19,6 +19,7 @@ struct ContentView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(.brown)
                         .shadow(radius: 2)
+                    Image("logo")
                     Text("A goal tracker as simple as your ambitions are big!")
                         .foregroundColor(.black)
                         .multilineTextAlignment(.center)
