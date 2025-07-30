@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+roshal-dev
         NavigationStack{
             ZStack {
                 Image("color 3")
@@ -45,6 +46,10 @@ struct ContentView: View {
                     .padding(60)
                 }
             }
+
+        VStack {
+            
+
         }
     }
 }
