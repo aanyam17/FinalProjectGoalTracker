@@ -11,15 +11,12 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             ZStack {
-                
-                
+                Image("color 3")
+                    .resizable()
+                    .ignoresSafeArea()
                 VStack (spacing: 40) {
-                    Text("AIM")
-                        .font(.title)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.brown)
-                        .shadow(radius: 2)
                     Image("logo")
+                        .cornerRadius(45)
                     Text("A goal tracker as simple as your ambitions are big!")
                         .foregroundColor(.black)
                         .multilineTextAlignment(.center)
