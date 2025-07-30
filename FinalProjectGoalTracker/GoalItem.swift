@@ -12,10 +12,12 @@ import SwiftData
 class GoalItem {
     var title: String
     var isImportant: Bool
+    var dueDate: Date
     
-    init(title: String, isImportant: Bool = false) {
+    init(title: String, isImportant: Bool = false, dueDate: Date) {
         self.title = title
         self.isImportant = isImportant
+        self.dueDate = dueDate
     }
 }
 
