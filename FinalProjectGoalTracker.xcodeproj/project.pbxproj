@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		AAB7E2A32E3A90B50094354A /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB7E2A22E3A90B50094354A /* SecondView.swift */; };
+		AAB7E2BB2E3AC8B00094354A /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB7E2BA2E3AC8B00094354A /* AboutMeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C954E252E39637D00D1A536 /* FinalProjectGoalTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProjectGoalTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAB7E2A22E3A90B50094354A /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		AAB7E2BA2E3AC8B00094354A /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -38,6 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				AAB7E2A22E3A90B50094354A /* SecondView.swift */,
+				AAB7E2BA2E3AC8B00094354A /* AboutMeView.swift */,
 				4C954E272E39637D00D1A536 /* FinalProjectGoalTracker */,
 				4C954E262E39637D00D1A536 /* Products */,
 			);
@@ -125,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAB7E2BB2E3AC8B00094354A /* AboutMeView.swift in Sources */,
 				AAB7E2A32E3A90B50094354A /* SecondView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
