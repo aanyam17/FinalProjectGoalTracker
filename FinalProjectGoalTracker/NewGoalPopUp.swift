@@ -43,8 +43,10 @@ struct NewGoalPopUp: View {
         .padding()
     }
     func addGoal() {
-        let goal = GoalItem(title: goalItem.title, isImportant: goalItem.isImportant, dueDate: goalItem.dueDate)
-        modelContext.insert(goal)
+        //let goal = GoalItem(title: goalItem.title, isImportant: goalItem.isImportant, dueDate: goalItem.dueDate)
+        //modelContext.insert(goal)
+        modelContext.insert(goalItem)
+            try? modelContext.save()
     }
 }
 

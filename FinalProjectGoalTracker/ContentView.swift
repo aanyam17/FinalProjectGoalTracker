@@ -51,7 +51,8 @@ struct ContentView: View {
                 
                 
             }
-        }
+        } .modelContainer(for: GoalItem.self)
+    }
 }
 #Preview {
     ContentView()
