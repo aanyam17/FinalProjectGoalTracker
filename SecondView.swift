@@ -12,7 +12,7 @@ struct SecondView: View {
         NavigationStack{
             
             ZStack{
-                Image("color 4")
+                Image("color 3")
                     .resizable()
                     .ignoresSafeArea()
                 VStack(spacing: 40) {
