@@ -23,7 +23,10 @@ struct ContentView: View {
                                 .stroke(Color.black, lineWidth: 0.5)
                         )
                         .shadow(color: .black.opacity(0.3), radius: 4, x: 2, y: 4)
-                    Text("A goal tracker as simple as your ambitions are big!")
+                    Text("AIM HIGH, FLY HIGHER")
+                        .bold()
+                        .italic()
+                        .font(.system(size: 24))
                         .foregroundColor(.black)
                         .multilineTextAlignment(.center)
                     NavigationLink(destination: SecondView()) {
@@ -52,6 +55,7 @@ struct ContentView: View {
                 
             }
         }
+    }
 }
 #Preview {
     ContentView()
