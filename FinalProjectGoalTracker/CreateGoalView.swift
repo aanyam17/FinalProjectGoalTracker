@@ -15,57 +15,62 @@ struct CreateGoalView: View {
     @Environment(\.modelContext) var modelContext
     
     var body: some View {
-        VStack {
-            Text("My Goals")
-                .font(.system(size: 40))
-                .fontWeight(.black)
-                .foregroundColor(Color(red: 0.886, green: 0.612, blue: 0.620))
-            
-            List {
-                ForEach(toDos) { goalItem in
-                    HStack {
-                        if goalItem.isImportant {
-                            Text("‼️" + goalItem.title)
-                        } else {
-                            Text(goalItem.title)
-                        }
-                        Spacer()
-                        Text("Due: \(goalItem.dueDate, formatter: dateFormatter)")
-                            .font(.subheadline)
-                    }
-                }
-                .onDelete(perform: deleteGoal)
-            }
-            .listStyle(.plain)
-            
-            Spacer()
-            if !showNewGoal {
-                Button(action: {
-                    withAnimation {
-                        showNewGoal = true
-                    }
-                }) {
-                    Text("Add New Goal")
-                        .foregroundColor(Color(red: 0.710, green: 0.086, blue: 0.196))
-                        .bold()
-                        .foregroundStyle(.black)
-                        .background(
-                            RoundedRectangle(cornerRadius: 45)
-                                .fill(Color.pink.opacity(0.3))
-                                .frame(width: 150, height: 90)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 45)
-                                        .stroke(Color(red: 0.710, green: 0.086, blue: 0.196), lineWidth: 0.5)))
-                }
-            }
-            if showNewGoal {
-                NewGoalPopUp(showNewGoal: $showNewGoal, goalItem: GoalItem(title: "", isImportant: false, dueDate: Date())
-                )
+        NavigationView {
+            VStack {
+                Text("My Goals")
+                    .font(.system(size: 40))
+                    .fontWeight(.black)
+                    .foregroundColor(Color(red: 0.886, green: 0.612, blue: 0.620))
                 
+                List {
+                    ForEach(toDos) { goalItem in
+                        NavigationLink(destination: ProgressBar()) {
+                            HStack {
+                                if goalItem.isImportant {
+                                    Text("‼️" + goalItem.title)
+                                } else {
+                                    Text(goalItem.title)
+                                }
+                                Spacer()
+                                Text("Due: \(goalItem.dueDate, formatter: dateFormatter)")
+                                    .font(.subheadline)
+                                }
+                            }
+                        }
+                        .onDelete(perform: deleteGoal)
+                    }
+                    .listStyle(.plain)
+                    
+                    Spacer()
+                    if !showNewGoal {
+                        Button(action: {
+                            withAnimation {
+                                showNewGoal = true
+                            }
+                        }) {
+                            Text("Add New Goal")
+                                .foregroundColor(Color(red: 0.710, green: 0.086, blue: 0.196))
+                                .bold()
+                                .foregroundStyle(.black)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 45)
+                                        .fill(Color.pink.opacity(0.3))
+                                        .frame(width: 150, height: 90)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 45)
+                                                .stroke(Color(red: 0.710, green: 0.086, blue: 0.196), lineWidth: 0.5)))
+                        }
+                        .padding(.bottom, 40)
+                    }
+                    if showNewGoal {
+                        NewGoalPopUp(showNewGoal: $showNewGoal, goalItem: GoalItem(title: "", isImportant: false, dueDate: Date())
+                        )
+                        
+                    }
+                }
             }
+        .padding(.bottom, 30)
         }
-        .padding()
-    }
     
     func deleteGoal(at offsets: IndexSet) {
         for offset in offsets {
