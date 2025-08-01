@@ -35,18 +35,21 @@ struct AboutMeView: View {
                             .background(Color(red: 0.89, green: 0.61, blue: 0.62))
                             .cornerRadius(10)
                             .foregroundColor(.black)
+                            .shadow(color: .black.opacity(0.3), radius: 4, x: 2, y: 4)
                         
                         TextField("Birthday", text: $birthday)
                             .padding()
                             .background(Color(red: 0.89, green: 0.61, blue: 0.62))
                             .cornerRadius(10)
                             .foregroundColor(.black)
+                            .shadow(color: .black.opacity(0.3), radius: 4, x: 2, y: 4)
                         
                         TextField("What role do you play?", text: $role)
                             .padding()
                             .background(Color(red: 0.89, green: 0.61, blue: 0.62))
                             .cornerRadius(10)
                             .foregroundColor(.black)
+                            .shadow(color: .black.opacity(0.3), radius: 4, x: 2, y: 4)
                         
                         Text("Are you looking to pursue short or long term goals?")
                             .foregroundColor(.black)
@@ -66,7 +69,7 @@ struct AboutMeView: View {
                                         .background(Color(red: 0.89, green: 0.61, blue: 0.62))
                                         .cornerRadius(15)
                                         .foregroundColor(.black)
-                                    
+                                        .shadow(color: .black.opacity(0.3), radius: 4, x: 2, y: 4)
                                 }
                             }
                         }
@@ -80,6 +83,7 @@ struct AboutMeView: View {
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 25)
                                             .stroke(Color.black, lineWidth: 1)
+                                            .shadow(color: .black.opacity(0.3), radius: 4, x: 2, y: 4)
                                     )
                             }
                             .padding(.top)
